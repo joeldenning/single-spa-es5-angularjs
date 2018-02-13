@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <script src="https://unpkg.com/single-spa"></script>
+  <script src="https://unpkg.com/single-spa-angular1"></script>
+  <script src="https://unpkg.com/angular@1.6.9/angular.min.js"></script>
+  <script src="/es5-app.js"></script>
+  <body>
+    <button onclick="toggleEs5App()">Toggle AngularJS app</button>
+    <div id="angularjs-container" />
+    <script>
+      window.showEs5App = true;
+      singleSpa.registerApplication('es5-app', es5App, function(location) {return showEs5App});
+      singleSpa.start();
+
+      function toggleEs5App() {
+        // See https://github.com/CanopyTax/single-spa/blob/master/docs/single-spa-config.md#registering-applications
+        // Usually you have a path prefix or something in the url to determine if the app is active.
+        // I did not do so here out of laziness / to save time.
+        window.showEs5App = !window.showEs5App;
+        singleSpa.triggerAppChange();
+      }
+    </script>
+  </body>
+</html>
+
+

@@ -1,0 +1,12 @@
+{
+  "name": "single-spa-es5-angularjs",
+  "repository": "git@github.com:joeldenning/single-spa-es5-angularjs.git",
+  "author": "Joel Denning <joel.denning@canopytax.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "http-server -o"
+  },
+  "devDependencies": {
+    "http-server": "^0.11.1"
+  }
+}
